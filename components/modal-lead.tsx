@@ -91,11 +91,9 @@ export function LeadFormModal({
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     try {
-      window.fbq("track", "StartTrial", {
-        content_name: "Botón CTA",
-        value: 0,
-        currency: "USD",
-      });
+    if (typeof window.fbq === 'function') {
+  window.fbq("track", "CompleteRegistration");
+}
     } catch (error) {
       console.error("Error al ejecutar fbq:", error);
     }
