@@ -92,7 +92,7 @@ export function LeadFormModal({
     e.preventDefault()
     try {
     if (typeof window.fbq === 'function') {
-  window.fbq("track", "CompleteRegistration");
+  window.fbq("track", "Contact");
 }
     } catch (error) {
       console.error("Error al ejecutar fbq:", error);
@@ -280,6 +280,7 @@ export function LeadFormModal({
                 <Button
                   type="submit"
                   disabled={submitting}
+                  id="pixel-contact"
                   className={cn(
                     'mt-',
                     'relative overflow-hidden',
