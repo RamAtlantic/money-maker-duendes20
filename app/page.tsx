@@ -86,7 +86,7 @@ export default function Page() {
         />
 
         {/* Botón CTA (desktop) */}
-        <div className="absolute top-[25%] left-1/5 flex justify-center items-center w-full z-20 cursor-pointer">
+        <div className="absolute top-[25%] left-1/5 flex justify-center items-center z-20 cursor-pointer">
           {showButton && (
             <div className="flex gap-4 justify-between items-center w-full px-24">
               <button
